@@ -43,4 +43,15 @@ This script will safely append the repository configuration to `pacman.conf` and
 
 ---
 
+## To-Do
+
+- **Sign packages**  
+  Packages are currently unsigned. Add GPG signing to improve repository security.
+
+- **Decouple `nstep` from the deploy script**  
+  `nstep` is currently dependent on the deployment script for setting up NextStep.  
+  Make `nstep` fully independent so it can manage deployments on its own.
+
+---
+
 If you have issues, suggestions, or want to contribute, feel free to open an issue.
