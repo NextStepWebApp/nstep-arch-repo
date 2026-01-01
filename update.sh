@@ -1,28 +1,28 @@
+
 #!/bin/bash
 #
 # Automates building packages and pushing to the repo
 
-set -e  # Exit on any error
+set -e
 
+ARCH="x86_64"
 BUILD_DIR="nstep-build"
 REPO_NAME="nstep-arch-repo"
 
-echo "Setting up build directory"
-mkdir -p "$BUILD_DIR"
+echo "Setting up build directory and cleaning $ARCH directory"
+rm -rf "$ARCH"
+mkdir -p "$BUILD_DIR" "$ARCH"
 ln -sf ../PKGBUILD "$BUILD_DIR/PKGBUILD"
-
-echo "Cleaning x86_64 directory"
-rm x86_64/*
 
 echo "Building package"
 cd "$BUILD_DIR"
 makepkg -sf
 
 echo "Copying package to repo"
-cp *.pkg.tar.zst ../x86_64/
+cp *.pkg.tar.zst "../$ARCH/"
 
 echo "Updating repository database"
-cd ../x86_64
+cd "../$ARCH"
 
 repo-add "$REPO_NAME.db.tar.zst" *.pkg.tar.zst
 
@@ -38,7 +38,7 @@ cd ..
 rm -rf "$BUILD_DIR"
 
 echo "Committing and pushing to GitHub"
-git add x86_64/
+git add "$ARCH/"
 git commit -m "Update package: $(date '+%Y-%m-%d')"
 git push
 
