@@ -21,12 +21,17 @@ Server = https://github.com/NextStepWebApp/nstep-arch-repo/raw/refs/heads/main/$
 Then refresh pacman:
 
 ```bash
-sudo pacman -Sy
+sudo pacman -Syyu
 ```
 
+And install nstep:
+
+```bash
+sudo pacman -S nstep-git
+```
 ---
 
-### 🚀 Option 2: One-line setup script
+### Option 2: One-line setup script
 
 Copy and run the following command to automatically configure the repository:
 
@@ -38,36 +43,4 @@ This script will safely append the repository configuration to `pacman.conf`.
 
 ---
 
-## 🔐 Security Notice
-
-This repository currently uses:
-
-```
-SigLevel = Optional TrustAll
-```
-
-This disables package signature verification and is suitable for **personal or development use**. For production systems, signed packages are strongly recommended.
-
----
-
-## 📁 Architecture Support
-
-Packages are served per-architecture using pacman’s `$arch` variable (e.g. `x86_64`, `aarch64`).
-
----
-
-## 🛠️ Development & Maintenance
-
-* Packages are built using `makepkg`
-* Repository metadata is managed with `repo-add`
-* Hosting is provided via GitHub (raw content)
-
----
-
-## 📄 License
-
-MIT (or specify your license here)
-
----
-
-If you have issues, suggestions, or want to contribute, feel free to open an issue or pull request.
+If you have issues, suggestions, or want to contribute, feel free to open an issue.
