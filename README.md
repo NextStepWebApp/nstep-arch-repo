@@ -39,7 +39,7 @@ Copy and run the following command to automatically configure the repository:
 bash <(curl -sL https://github.com/NextStepWebApp/nstep-arch-repo/raw/refs/heads/main/setup.sh)
 ```
 
-This script will safely append the repository configuration to `pacman.conf`.
+This script will safely append the repository configuration to `pacman.conf` and install nstep.
 
 ---
 

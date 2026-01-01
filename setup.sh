@@ -7,6 +7,6 @@ SigLevel = Optional TrustAll
 Server = https://github.com/NextStepWebApp/nstep-arch-repo/raw/refs/heads/main/\$arch
 EOF"
 
-sudo pacman -Syyu
+sudo pacman -Syyu --noconfirm
 
-sudo pacman -S nstep-git
+sudo pacman -S nstep-git --noconfirm
