@@ -2,6 +2,8 @@
 #!/bin/bash
 #
 # Automates building packages and pushing to the repo
+#
+# You do need to have git setup with github, so you keys
 
 set -e
 
