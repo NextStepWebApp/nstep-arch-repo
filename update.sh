@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 # Automates building packages and pushing to the repo
@@ -41,6 +40,7 @@ rm -rf "$BUILD_DIR"
 
 echo "Committing and pushing to GitHub"
 git add "$ARCH/"
+git add PKGBUILD
 git commit -m "Update package: $(date '+%Y-%m-%d')"
 git push
 
