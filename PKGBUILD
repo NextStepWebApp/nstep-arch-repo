@@ -40,6 +40,9 @@ package() {
     # Install install_nextstep.sh
     install -Dm755 install_nextstep.sh "$pkgdir/opt/nstep/install_nextstep.sh"
 
+    # Create state directories
+    install -dm755 "$pkgdir/var/lib/nstep/"{downloads,versions,current}
+
     # Install license
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/nstep/LICENSE"
 }
