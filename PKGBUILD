@@ -37,8 +37,8 @@ package() {
     install -Dm644 config.json "$pkgdir/etc/nstep/config.json"
     install -Dm644 package.json "$pkgdir/etc/nstep/packages.json"
 
-    # Install install_nextstep.sh
-    install -Dm755 install_nextstep.sh "$pkgdir/opt/nstep/install_nextstep.sh"
+    # Install setup_nextstep.sh
+    install -Dm755 setup_nextstep.sh "$pkgdir/opt/nstep/setup_nextstep.sh"
 
     # Create state directories
     install -dm755 "$pkgdir/var/lib/nstep/"{downloads,versions,current}
