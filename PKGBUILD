@@ -12,7 +12,7 @@ provides=(nstep)
 conflicts=(nstep)
 backup=(
     etc/nstep/config.json
-    etc/nstep/packages.json
+    etc/nstep/package.json
 )
 source=("git+https://github.com/NextStepWebApp/nstep.git")
 sha256sums=('SKIP')
@@ -41,7 +41,7 @@ package() {
     install -Dm755 setup_nextstep.sh "$pkgdir/opt/nstep/setup_nextstep.sh"
 
     # Create state directories
-    install -dm755 "$pkgdir/var/lib/nstep/{downloads,versions,current,backup}"
+    install -dm755 "$pkgdir/var/lib/nstep/"{downloads,versions,current,backup}
 
     # Install license
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/nstep/LICENSE"
