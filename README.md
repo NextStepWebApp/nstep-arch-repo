@@ -43,6 +43,12 @@ This script will safely append the repository configuration to `pacman.conf` and
 
 ---
 
+## Build command
+nsteprepo="path/to/nsteprepo"
+
+alias nstep-build="cd "$nsteprepo" && bash "$nsteprepo/update.sh" && cd -"
+
+
 ## To-Do
 
 - **Sign packages**  
