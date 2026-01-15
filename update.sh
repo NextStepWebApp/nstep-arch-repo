@@ -6,6 +6,8 @@
 
 set -e
 
+git pull
+
 ARCH="x86_64"
 BUILD_DIR="nstep-build"
 REPO_NAME="nstep-arch-repo"
