@@ -1,6 +1,6 @@
 # Maintainer: Melchizedek Shah <melchizedekshah18@proton.me>
 pkgname=nstep-git
-pkgver=r101.7c96bc6
+pkgver=r102.3d33d54
 pkgrel=1
 pkgdesc="A simple package manager written in Go for managing NextStep web application deployments"
 arch=(x86_64)
