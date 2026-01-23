@@ -10,10 +10,10 @@ depends=(tar)
 makedepends=(go git)
 provides=(nstep)
 conflicts=(nstep)
-backup=(
-    etc/nstep/config.json
-    etc/nstep/package.json
-)
+#backup=(
+#    etc/nstep/config.json
+#    etc/nstep/package.json
+#)
 source=("git+https://github.com/NextStepWebApp/nstep.git")
 sha256sums=('SKIP')
 
@@ -35,7 +35,9 @@ package() {
 
     # Install config files
     install -Dm644 config.json "$pkgdir/etc/nstep/config.json"
-    install -Dm644 package.json "$pkgdir/etc/nstep/package.json"
+    #install -Dm644 package.json "$pkgdir/etc/nstep/package.json"
+    install -Dm644 setup.json "$pkgdir/etc/nstep/setup.json"
+    install -Dm755 state.json "$pkgdir/var/lib/nstep/state.json"
 
     # Install setup_nextstep.sh
     install -Dm755 setup_nextstep.sh "$pkgdir/opt/nstep/setup_nextstep.sh"
