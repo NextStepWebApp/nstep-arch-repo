@@ -1,6 +1,6 @@
 # Maintainer: Melchizedek Shah <melchizedekshah18@proton.me>
 pkgname=nstep-git
-pkgver=r130.af5c7a9
+pkgver=r134.cbf4197
 pkgrel=1
 pkgdesc="A simple package manager written in Go for managing NextStep web application deployments"
 arch=(x86_64)
@@ -37,7 +37,7 @@ package() {
     install -Dm644 config.json "$pkgdir/etc/nstep/config.json"
     #install -Dm644 package.json "$pkgdir/etc/nstep/package.json"
     install -Dm644 setup.json "$pkgdir/etc/nstep/setup.json"
-    install -Dm755 state.json "$pkgdir/var/lib/nstep/state.json"
+    #install -Dm755 state.json "$pkgdir/var/lib/nstep/state.json"
 
     # Install setup_nextstep.sh
     install -Dm755 setup_nextstep.sh "$pkgdir/opt/nstep/setup_nextstep.sh"
